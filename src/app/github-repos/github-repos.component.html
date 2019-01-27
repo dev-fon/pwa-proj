@@ -1,3 +1,6 @@
-<p>
-  {{repos}}
-</p>
+<ul>
+    <li *ngFor="let repo of repos">
+      {{repo.name}} {{repo.url}}
+    </li>
+  </ul>
+  
