@@ -7,6 +7,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GithubReposComponent } from './github-repos/github-repos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -15,9 +22,16 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,    
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatToolbarModule,
+    FormsModule    
   ],
   providers: [
     GithubServiceService

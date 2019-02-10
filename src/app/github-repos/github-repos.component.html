@@ -1,6 +1,12 @@
-<ul>
-    <li *ngFor="let repo of repos">
-      {{repo.name}} {{repo.url}}
-    </li>
-  </ul>
-  
+<div class="main-container">
+  <mat-toolbar class="searchcontrols">
+  <mat-toolbar-row>
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="GitHub User" value="{{searchText}}">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onSearchButtonClick()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+</div>

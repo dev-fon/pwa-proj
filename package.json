@@ -4,12 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "pwa": "http-server dist/pwa-proj -o"
   },
   "engines": {
     "node": "8.9.4",
@@ -17,11 +18,13 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.2.0",
+    "@angular/animations": "^7.2.2",
+    "@angular/cdk": "^7.3.0",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
+    "@angular/material": "^7.3.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/pwa": "^0.12.3",

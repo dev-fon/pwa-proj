@@ -23,5 +23,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "repos",
+      "urls": [
+        "https://api.github.com/users/*/repos"
+      ],
+      "cacheConfig": {
+        "maxSize": 5,
+        "maxAge": "24h",
+        "timeout": "4s",
+        "strategy": "performance"
+      }
+    }
   ]
 }

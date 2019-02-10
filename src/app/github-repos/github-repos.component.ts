@@ -14,6 +14,7 @@ interface GitHubRepo {
 })
 export class GithubReposComponent implements OnInit {
   repos: GitHubRepo[];
+  public searchText: string;
 
   constructor(private githubService: GithubServiceService) { }
 
@@ -24,4 +25,6 @@ export class GithubReposComponent implements OnInit {
       });
   }
 
+  onSearchButtonClick() {
+  }
 }
