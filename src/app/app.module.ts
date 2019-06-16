@@ -11,9 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,    
+    AppRoutingModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
@@ -31,7 +32,9 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatInputModule,
     MatToolbarModule,
-    FormsModule    
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
   ],
   providers: [
     GithubServiceService
