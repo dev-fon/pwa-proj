@@ -7,7 +7,6 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pwa-proj';
 
   constructor(updates: SwUpdate) {
     updates.available.subscribe(event => {

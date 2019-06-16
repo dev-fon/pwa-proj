@@ -1,0 +1,37 @@
+.repo-container {
+  display: flex;
+
+  .left,
+  .right {
+    width: 33%;
+  }
+
+  .repo-card {
+    padding: 1rem;
+    margin: 1rem;
+
+    .repo-desc {
+      margin: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repo-container {
+    display: flex;
+
+    .left,
+    .right {
+      width: 0;
+    }
+
+    .repo-card {
+      padding: 1rem;
+      margin: 1rem;
+
+      .repo-desc {
+        margin: 20px;
+      }
+    }
+  }
+}

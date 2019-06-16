@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { GithubServiceService } from '../github-service.service';
 
 interface GitHubRepo {
+  html_url: string;
   name: string;
-  url: string;
+  language: string;
+  description: string;
 }
 
 
@@ -19,12 +21,16 @@ export class GithubReposComponent implements OnInit {
   constructor(private githubService: GithubServiceService) { }
 
   ngOnInit() {
-    this.githubService.getRepos('nel-sam')
-      .subscribe((data: GitHubRepo[]) => {
-        this.repos = data;
-      });
+    this.githubService.getRepos('dfonjga')
+    .subscribe((data: GitHubRepo[]) => {
+      this.repos = data;
+    });
   }
 
   onSearchButtonClick() {
+    this.githubService.getRepos(this.searchText)
+    .subscribe((data: GitHubRepo[]) => {
+      this.repos = data;
+    });
   }
 }
