@@ -335,6 +335,8 @@ MIT
 @angular/forms
 MIT
 
+@angular/material/button
+
 @angular/material/icon
 
 @angular/service-worker
