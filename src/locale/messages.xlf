@@ -9,6 +9,14 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7ca8d290feea786e7bcb0b33ca3507f01d34c0da" datatype="html">
+        <source>GitHub Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/github-repos/github-repos.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">GitHub Username placeholder</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>
