@@ -10,7 +10,14 @@
     "e2e": "ng e2e",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
     "postinstall": "ng build --aot --prod",
-    "pwa": "http-server dist/pwa-proj -o"
+    "pwa": "http-server dist/pwa-proj -o",
+    "extract": "ng xi18n --outputPath=./locale",
+    "build:all": "npm run build:en & npm run build:es & npm run build:ja",
+    "build:en": "ng build --aot",
+    "build:ja": "ng build --configuration=ja",
+    "build:es": "ng build --configuration=es",
+    "start:ja": "ng serve --configuration=ja",
+    "start:es": "ng serve --configuration=es"
   },
   "engines": {
     "node": "10.15.1",

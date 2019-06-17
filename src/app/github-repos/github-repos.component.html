@@ -1,17 +1,22 @@
 <div class="main-container">
   <mat-toolbar class="searchcontrols">
     <mat-toolbar-row>
+      <h1 i18n="@@topWelcome">Github User Search</h1>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
       <mat-form-field class="full-width">
         <input
           matInput
           type="text"
-          placeholder="GitHub User"
+          placeholder="GitHub Username"
           [(ngModel)]="searchText"
-          value="{{ searchText }}"/>
+          value="{{ searchText }}"
+        />
         <button
           mat-icon-button
           aria-label="Clear"
-          (click)="onSearchButtonClick()">
+          (click)="onSearchButtonClick()"
+        >
           <mat-icon>search</mat-icon>
         </button>
       </mat-form-field>

@@ -57,7 +57,28 @@
                 }
               ],
               "serviceWorker": true
+            },
+            "es" : {
+              "aot": true,
+              "baseHref": "/es/",
+              "deployUrl": "/es/",
+              "outputPath": "dist/pwa-proj/es",
+              "i18nFile" : "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "ja" : {
+              "aot": true,
+              "baseHref": "/ja/",
+              "deployUrl": "/ja/",
+              "outputPath": "dist/pwa-proj/ja",
+              "i18nFile" : "src/locale/messages.ja.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ja",
+              "i18nMissingTranslation": "error"
             }
+
           }
         },
         "serve": {
@@ -66,6 +87,12 @@
             "browserTarget": "pwa-proj:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "pwa-proj:build:es"
+            },
+            "ja": {
+              "browserTarget": "pwa-proj:build:ja"
+            },
             "production": {
               "browserTarget": "pwa-proj:build:production"
             }
